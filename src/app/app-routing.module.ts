@@ -11,13 +11,14 @@ import { UserlistingComponent } from './pages/userlisting/userlisting.component'
 import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent,canActivate:[authGuard] },
+  { path: 'home', component: HomeComponent },
   { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: 'features', component: FeaturesComponent,canActivate:[authGuard] },
   { path: 'pricing', component: PricingComponent, canActivate:[authGuard] },
   { path: 'about-me', component: AboutMeComponent, canActivate:[authGuard] },
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
+  {path:'users',component:UserlistingComponent,canActivate:[authGuard]},
   { path: 'user', component: UserlistingComponent, canActivate:[authGuard] },
   { path: '**', component: NotFoundComponent },
 ];
