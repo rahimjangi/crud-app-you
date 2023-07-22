@@ -16,6 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModel } from 'src/material.model';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {ToastrModule} from 'ngx-toastr';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { LoginComponent } from './pages/login/login.component';
+import { UserlistingComponent } from './pages/userlisting/userlisting.component';
+import { UpdatepopupComponent } from './components/updatepopup/updatepopup.component'
 
 @NgModule({
   declarations: [
@@ -29,6 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     FeedbackComponent,
     AddFeatureComponent,
+    RegistrationComponent,
+    LoginComponent,
+    UserlistingComponent,
+    UpdatepopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModel,
     ReactiveFormsModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

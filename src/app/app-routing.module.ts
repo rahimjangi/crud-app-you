@@ -5,13 +5,20 @@ import { FeaturesComponent } from './pages/features/features.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { LoginComponent } from './pages/login/login.component';
+import { UserlistingComponent } from './pages/userlisting/userlisting.component';
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'features', component: FeaturesComponent },
-  { path: 'pricing', component: PricingComponent },
-  { path: 'about-me', component: AboutMeComponent },
+  { path: 'home', component: HomeComponent,canActivate:[authGuard] },
+  { path: '', component: HomeComponent, pathMatch: 'full'},
+  { path: 'features', component: FeaturesComponent,canActivate:[authGuard] },
+  { path: 'pricing', component: PricingComponent, canActivate:[authGuard] },
+  { path: 'about-me', component: AboutMeComponent, canActivate:[authGuard] },
+  { path: 'register', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'user', component: UserlistingComponent, canActivate:[authGuard] },
   { path: '**', component: NotFoundComponent },
 ];
 
