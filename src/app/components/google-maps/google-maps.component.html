@@ -1,0 +1,17 @@
+<google-map [height]="height" [width]="width" [center]="center" [zoom]="zoom" (mapClick)="click($event)">
+    <!-- <map-marker *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"
+        [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(marker,'' )">
+        <map-info-window>{{ infoContent }}</map-info-window>
+    </map-marker> -->
+    <map-marker #markerElem *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"
+        [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(marker, marker.label)">
+    </map-marker>
+    
+    <map-info-window>{{ infoContent }}</map-info-window>
+</google-map>
+
+<!-- <button (click)="zoomIn()">Zoom in</button>
+<button (click)="zoomOut()">Zoom out</button>
+<button (click)="logCenter()">Log center</button> -->
+<input type="text" [(ngModel)]="marker">
+<button (click)="addMarker()">Add marker</button>
