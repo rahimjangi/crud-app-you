@@ -10,30 +10,21 @@
       "isActive": true
     },
     {
-      "id": "hoshi",
-      "name": "Houshang",
-      "password": "sodmvsdofv",
-      "email": "hoshi@gmail.com",
+      "id": "houshi",
+      "name": "Houshang kheairi",
+      "email": "houshi@gmail.com",
       "gender": "male",
-      "role": "",
-      "isActive": false
-    },
-    {
-      "id": "admin2",
-      "name": "admin2 admini",
-      "password": "2341524563246",
-      "email": "admin2@gmail.com",
-      "gender": "male",
-      "role": "",
-      "isActive": false
-    },
-    {
-      "id": "user1",
-      "name": "elham jamshidi",
       "password": "123",
-      "email": "elham1@gmail.com",
-      "gender": "female",
-      "role": "",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "ramin",
+      "name": "ramin jangi",
+      "email": "ramin@gmail.com",
+      "gender": "male",
+      "password": "123",
+      "role": "stuff",
       "isActive": false
     }
   ]
